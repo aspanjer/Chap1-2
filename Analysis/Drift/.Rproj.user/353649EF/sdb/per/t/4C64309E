@@ -1,0 +1,17 @@
+{
+    "contents" : "drift<-read.csv(file=\"drift_prop_r.csv\")\ndiet<-read.csv(file=\"diet_prop.csv\")\n#Stacked barplot\nco.c<-paste(c(\"#53bf00\", \"#4EBF00\",\t\"#5BBF00\",\t\"#B7BF00\",\t\"#BFBC00\",\t\"#BFA000\", \"#BF8100\",\t\"#BF5B00\",\t\"#BF2300\"))\npar(mar=c(9.5, 5.1, 1, 15), xpd=TRUE)\nbarplot(t(diet[1:10,2:10]),\n        ylab=\"\", ylim=c(0,1), \n        col=co.c,axes=F, names.arg= sites.s, las=2, cex.names=2)\nsites.s<-drift[1:10,1]\ntitle(ylab=\"Proportion of Diet\", line=6, cex.lab=2)\n#for(i in 1:6){\n#barplot(t(food[i,4:6]), space=i+1, add=TRUE, main=\"Diet Energy Proportion\",\n#       ylab=\"Proportion of Diet\", ylim=c(0,1.1), \n#       col=color[i])\n#}\n\naxis(side=2, at=c(0,.25,.5,.75,1),cex.axis=1.8, las=1)\nlegend(\"topright\", inset=c(-.52,0), c(\"Coleoptera\", \"Hemiptera\", \n                                    \"Hymenoptera\", \"Other Adult\", \n                                    \"Aquatic larvae \\n(rigid-bodied)\", \n                                    \"Winged insect\", \"Aquatic Nymphs\",\n                                    \"Aquatic Other\",\"Aquatic larvae \\n(soft-bodied)\"), \n       xpd=TRUE, fill= rev(co.c), bty=\"n\", cex=2)\n",
+    "created" : 1475698439726.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3866928161",
+    "id" : "4C64309E",
+    "lastKnownWriteTime" : 1476203642,
+    "path" : "~/Documents/Current Projects/Drift/drift_prop.R",
+    "project_path" : "drift_prop.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

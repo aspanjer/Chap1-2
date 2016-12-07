@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1475698477395.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F73B88C",
+    "lastKnownWriteTime" : 4294901766,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ztu10ld6rw",
+        "caption" : "drift",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=drift&cache_key=ztu10ld6rw",
+        "displayedObservations" : 22,
+        "environment" : "",
+        "object" : "drift",
+        "totalObservations" : 22,
+        "variables" : 12
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

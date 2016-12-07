@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1480007243071.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8BAF566F",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "0yao2e6bk4",
+        "caption" : "files.church",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=files.church&cache_key=0yao2e6bk4",
+        "displayedObservations" : "10",
+        "environment" : "",
+        "object" : "files.church",
+        "totalObservations" : "10",
+        "variables" : "2"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

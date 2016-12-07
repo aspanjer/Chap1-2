@@ -1,0 +1,96 @@
+Outline for Thesis_ 2nd edition
+
+Introduction 
+
+Objectives
+
+Main Questions
+
+Site Selection
+
+Field Collection
+
+Chapter One: Coho Growth potential in Urbanized Streams- Bioenergetics investigation and necropsy observations
+
+Methods
+Part 1: Summary of Field data: Necropsy, Temperature, Fish Size, Drift Collection
+	I. Fish collection
+	II. Temperature probes
+	III.Dissection, necropsy scoring and otolith extraction 
+	IV. Drift Collection 
+
+Part 2: Fish aging- Analysis of otolith (what else can we glean from otolith data, and condition)
+
+Part 3: Drift and Diet analysis
+	I. Collection Methods
+	II. Fractional analysis
+
+Part 4: Bioenergetics modeling-parameters, run timing, etc. 
+	I. Model background and composition 
+	II.
+
+Part 5: Comparison of growth to urban landuse (comparison to chemistry to come in the second chapter. 
+	Thinking: for a simplified comparison I think I’ll use the initial landuse data to do a quick run-through of the the results of the bioenergetics results. 
+
+Results
+
+
+Chapter Two: Pollution impacts to Salmonids in Urbanized Streams- Biomarker assessment and Surface water chemistry, and connections with bioenergetics 
+
+Introduction to Pollution Assessment
+
+Part 1: Summary of water chemistry
+	I. Explanation of water quality sampling
+		a. 10 week USGS sampling program at selected sites
+		b. Summer passive sampling 
+	II. Locations of samplers, handling, and analysis methods
+		a. deployment methods, locations, timing of passive samplers
+		b. analytical analysis of samplers
+	III. Analytical results (DGT, POCIS, and USGS summary)
+		a. Summary of USGS chemistry from fish health streams 
+		b. Summary of results from POCIS and DGT samplers
+	IV. Conclusions 
+
+Part 2: Shotgun gene target identification 
+	I. The use of RNAseq for shotgunning gene target identification
+		a. RNAseq benefits
+		b. Reasons for not assuming a priori gene targets
+	II. Bioinformatics
+		a. Transcriptome assembly 
+		b. Blasting of transcriptome for gene identification
+		c. Differential expression analysis using EDGER (GLM model estimation)
+
+	III. Selection of targets
+		
+
+Part 3: Toxicogentic gene expression profiles
+HERE I’M NOT SURE IF NANOSTRING OR QPCR IS MORE APPROPRIATE
+
+Part 4: Connecting gene expression patterns to water chemistry
+
+	I. Multivariate techniques- need to read up a bit more here
+	II. Correlations
+	III. Limitations
+
+Conclusions 
+
+Use of these tools for fish health assessment 
+What’s need as we move on
+
+RNAseq methods
+
+RNA Isolation
+Livers stored at -20 C were removed from RNAlater solution were removed using a pipette tip and transferred into a 5mL snap-cap RNase-free container. 500uL of RNAzol was added and tissues were homogenized, an additional 500 uL of RNAzol was added, and 400 uL of H2O.  Homogenized tissues were left at room temperature for 15 minutes, spun at 15000 g. Supernatant was extracted and mixed with 750uL of isopropanol. This was left to sit for 10 minutes at room temperature, spun at 12000g and the supernatant discarded. The resulting RNA pellet was washed with ethanol and redissolved in DEPC-water. Total RNA was stored at -80 C.  (this needs some work) This was repeated for all coho and cutthroat samples. 
+
+Reverse-transcription
+
+Total RNA was removed from the freezer and left to thaw at room-temperature while on ice.(REAGENTS for master mix) the 
+
+
+Preparation for sequencing at the Genomics facility
+
+Each sample was labeled according to the UW genomic facility guidelines, placed into a 96-well try, foil sealed, and hand delivered to the genomics facility at the University of Washington in Seattle. RNA-libraries were prepared using Illumina truseq vs 4. Checked on a Bioanalyzer for integrity and ran on an Illumina Nextseq 500 generating >600 million reads over 4 lanes on 24 samples. Sequencing took 60 hours. Raw reads were post-processed to remove adapter sequences and split into individuals (one file per lane, per fish). 
+
+Bioinformatics 
+Files were combined for each individual, resulting in 24 files with averaging ~25 million reads per individual. the individual with the most reads at each of the 4 sites were combined for a total of ~100 million reads to compile a reference transcriptome. The software package trinity version… was used to compile the transcriptome. Computer servers from the University of Illinois were used for Trinity on the galaxy instance. The transcriptome was uploaded to the public galaxy instance at use galaxy.org, and each individual from each site reads were counted using sailfish as compared to this reference. Count tables were compiled for each individual and sites were compared using the R programing language and the program EdgeR. This program using a generalized linear binomial model to compare between treatment condition with multiple biological replicated. In this case, individuals were treated as biological replicates, and the individual sites as treatment conditions. Differential expression analysis was carried out. A list of top gene that were differentiated as compared to the reference site at significant levels was developed for Blasting.
+ 

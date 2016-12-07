@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1475729427990.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "67E7CE32",
+    "lastKnownWriteTime" : 8389754659302220320,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "33ekj5la2r",
+        "caption" : "diet",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=diet&cache_key=33ekj5la2r",
+        "displayedObservations" : "10",
+        "environment" : "",
+        "object" : "diet",
+        "totalObservations" : "10",
+        "variables" : "10"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

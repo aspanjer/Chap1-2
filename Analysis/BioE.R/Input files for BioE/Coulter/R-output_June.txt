@@ -1,0 +1,542 @@
+> Sim.1 <- RUN.FISH.BIOENERGETICS("3ACO.txt", Weight.Initial=.2,
++ Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2247144
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.003256e-06
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> write.csv(x=Sim.1, file="3ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("4ACO.txt", Weight.Initial=.2,
++ Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2411801
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 3.232671e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> write.csv(x=Sim.1, file="4ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("4ACO.txt", Weight.Initial=.2,
++ Weight.Final=.98, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 0.98
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.1943899
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 4.280773e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> write.csv(x=Sim.1, file="4ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("5ACO.txt", Weight.Initial=.2,
++ Weight.Final=1.19, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 1.19
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.1937709
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.20645e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> write.csv(x=Sim.1, file="5ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("6ACO.txt", Weight.Initial=.2,
++ Weight.Final=3.03, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 3.03
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2352124
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 5.261868e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> write.csv(x=Sim.1, file="6ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("3ACO.txt", Weight.Initial=.2,
++ Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2940827
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 3.173575e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> Sim.1 <- RUN.FISH.BIOENERGETICS("3ACO.txt", Weight.Initial=.2,
++ Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+ Show Traceback
+ 
+ Rerun with Debug
+ Error in file(file, "rt") : cannot open the connection In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '3ACO.txt': No such file or directory
+> write.csv(x=Sim.1, file="3ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("3ACO.txt", Weight.Initial=.2,
++ Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3,
++ EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2)
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2940827
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 3.173575e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location.
+> write.csv(x=Sim.1, file="3ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("4ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3687405
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.538725e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="4ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("5ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3030436
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.380447e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="5ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("6ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2864493
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 3.776865e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="6ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("3ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.39, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.39
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2940827
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 3.173575e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="3ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("4ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=.98, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 0.98
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2559803
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 7.078071e-10
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="4ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("5ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=.1.19, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
+Error: unexpected numeric constant in:
+"Sim.1 <- RUN.FISH.BIOENERGETICS("5ACO.txt", Weight.Initial=.2, 
+                                Weight.Final=.1.19"
+>                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+Error: unexpected ',' in "                                EG.EX.Equation=3,"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="5ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("5ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=1.19, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 1.19
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.236117
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.408469e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="5ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("6ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=3.03, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 3.03
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3107663
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 6.981549e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="6ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("8ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=.95, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 0.95
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2391907
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 7.90077e-08
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="8ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("10ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=1.78, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 1.78
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2713327
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.470864e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="10ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("11ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.97, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.97
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3128222
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 9.547522e-08
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="11ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("12ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=2.48, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 2.48
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.2997284
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 1.892572e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="12ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("13ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=3.21, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 3.21
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3075326
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 8.251749e-08
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="13ACO.csv")
+> Sim.1 <- RUN.FISH.BIOENERGETICS("16ACO.txt", Weight.Initial=.2, 
++                                 Weight.Final=4.06, Spawning.Day=0, Gonad.Loss=0, Con.Equation=3, 
++                                 EG.EX.Equation=3, Resp.SDA.Equation=2, Pred.ED.Equation=2) 
+[1] "Name of Simulation"
+[1] "Example"
+[1] "----------------------------"
+[1] "Modeled Species"
+[1] "Coho salmon"
+[1] "----------------------------"
+[1] "Initial Weight"
+[1] 0.2
+[1] "----------------------------"
+[1] "Final Weight"
+[1] 4.06
+[1] "----------------------------"
+[1] "Best fit P-value"
+[1] 0.3331527
+[1] "----------------------------"
+[1] "Value of the function FIT.PVALUE coresponding to optimal P"
+[1] 2.605354e-07
+[1] "<><><><><><><><><><><><><><><>"
+[1] "Results of Simulation"
+[1] "<><><><><><><><><><><><><><><>"
+> 
+> #Easiest to set your working directory to where the source code is stored. Simple to set the working directory  
+> #in R-Studio---On main menue---Session-->Set Working Directory--->To Source File Location. 
+> write.csv(x=Sim.1, file="16ACO.csv")
+> 

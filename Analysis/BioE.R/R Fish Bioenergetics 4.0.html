@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="_w_bb0c2747/" />
+    <script type="text/javascript">
+(function() {
+  // http://stackoverflow.com/questions/10964966/detect-ie-version-in-javascript
+  function isIE () {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+  }
+  
+  if (isIE() === 8 || isIE() === 9){
+    // Set an absolute base href.
+    baseURL = document.URL;
+    baseURL = baseURL.substring(0, baseURL.lastIndexOf('/'));
+    document.getElementsByTagName('base')[0].setAttribute('href', baseURL + '/_w_bb0c2747/');
+  }
+})();
+</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons">7196694b46f8e7c34171939351e3a70cdd3ccf40</script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.11.0];shiny[0.10.2.1];selectize[0.8.5];bootstrap[2.3.2];bootstrap-responsive[2.3.2]</script>
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.js"></script>
+<link href="shared/selectize/css/selectize.bootstrap2.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="shared/selectize/js/selectize.min.js"></script>
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="shared/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+  <title>R Fish Bioenergetics 4.0</title>
+  <link rel="stylesheet" type="text/css" href="shared/font-awesome/css/font-awesome.min.css"/>
+<script src="__assets__/sockjs-0.3.min.js"></script>
+<script src="__assets__/rstudio-connect.js"></script>
+<link rel="stylesheet" type="text/css" href="__assets__/rstudio-connect.css"/>
+
+</head>
+<body>
+<script type="text/javascript" src="/__static__/components/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+<script type="text/javascript" src="/__static__/scripts/shinyapps.js"></script>
+<script type="text/javascript" src="/__static__/scripts/shinyapps.frame.content.js"></script>
+
+<div class="container-fluid">
+  <h2 style="padding: 10px 0px;">R Fish Bioenergetics 4.0</h2>
+  <div class="row-fluid">
+    <div class="span4">
+      <form class="well">
+        <h3>Input</h3>
+        <label class="control-label" for="spec">Species</label>
+        <select id="spec"><option value="1">Alewife (adult)</option>
+<option value="2">Alewife (juvenile)</option>
+<option value="3">Alewife (YOY)</option>
+<option value="4">Baltic herring (YOY)</option>
+<option value="5">Bighead carp</option>
+<option value="6">Bloater chub (adult)</option>
+<option value="7">Blue shark</option>
+<option value="8">Bluefish</option>
+<option value="9">Bluegill sunfish (adult)</option>
+<option value="10">Bluegill sunfish (juvenile)</option>
+<option value="11">Brown bullhead</option>
+<option value="12">Burbot</option>
+<option value="13">Chilean darter</option>
+<option value="14">Chinook salmon (adult)</option>
+<option value="15">Coho salmon (adult)</option>
+<option value="16">Dace (adult)</option>
+<option value="17">Eurasian perch (larvae &amp; YOY)</option>
+<option value="18">Eurasian perch</option>
+<option value="19">Eurasian minnow</option>
+<option value="20">European smelt (larvae &amp; juvenile)</option>
+<option value="21">European smelt (YOY)</option>
+<option value="22">European whitefish (larvae &amp; juvenile)</option>
+<option value="23">Fathead minnow</option>
+<option value="24">Flathead catfish (T&lt;10 C, adult)</option>
+<option value="25">Flathead catfish (T&lt;10 C, YOY)</option>
+<option value="26">Flathead catfish (T&gt;=10 C, adult)</option>
+<option value="27">Flathead catfish (T&gt;=10 C, YOY)</option>
+<option value="28">Generalised coregonid</option>
+<option value="29">Gizzard shad</option>
+<option value="30">Herring (adult)</option>
+<option value="31">Herring (juvenile)</option>
+<option value="32">Humpback chub (juvenile &amp; sub-adult)</option>
+<option value="33">Lake trout (adult)</option>
+<option value="34">Lake Washington Prickly Sculpin (adult)</option>
+<option value="35">Lake whitefish (adult)</option>
+<option value="36">Largemouth bass (adult)</option>
+<option value="37">Muskellunge (adult)</option>
+<option value="38">Tiger Muskellunge (juvenile)</option>
+<option value="39">Mysis (adult)</option>
+<option value="40">Nile perch</option>
+<option value="41">North Sea cod</option>
+<option value="42">Northern pike1 (adult)</option>
+<option value="43">Northern pike2 (adult)</option>
+<option value="44">Northern pikeminnow</option>
+<option value="45">Pallid sturgeon (age-0)</option>
+<option value="46">Pink salmon (adult)</option>
+<option value="47">Plains killifish</option>
+<option value="48">Rainbow smelt (adult)</option>
+<option value="49">Rainbow smelt (juvenile)</option>
+<option value="50">Rainbow smelt (YOY)</option>
+<option value="51">Red River shiner</option>
+<option value="52">Roach</option>
+<option value="53">Rockbass (T&lt;10 C, adult)</option>
+<option value="54">Rockbass (T&lt;10 C, YOY)</option>
+<option value="55">Rockbass (T&gt;=10 C, adult)</option>
+<option value="56">Rockbass (T&gt;=10 C, YOY)</option>
+<option value="57">Round goby</option>
+<option value="58">Rudd (adult)</option>
+<option value="59">Ruffe</option>
+<option value="60">Sacramento perch</option>
+<option value="61">Saugeye</option>
+<option value="62">Sea lamprey</option>
+<option value="63">Silver carp</option>
+<option value="64">Smallmouth bass (adult)</option>
+<option value="65">Smallmouth bass corrected (adult)</option>
+<option value="66">Smallmouth bass (T&lt;10 C, adult)</option>
+<option value="67">Smallmouth bass (T&lt;10 C, YOY)</option>
+<option value="68">Smallmouth bass (T&gt;=10 C, adult)</option>
+<option value="69">Smallmouth bass (T&gt;=10 C, YOY)</option>
+<option value="70">Snakehead (juvenile)</option>
+<option value="71">Sockeye salmon (adult)</option>
+<option value="72">Southern flounder</option>
+<option value="73">Steelhead (adult)</option>
+<option value="74">Striped bass (age-0)</option>
+<option value="75">Striped bass (adult)</option>
+<option value="76">Striped bass (age-1)</option>
+<option value="77">Striped bass (age-2)</option>
+<option value="78">Striped bass (YOY)</option>
+<option value="79">Tilapia (adult)</option>
+<option value="80">Tubenose goby</option>
+<option value="81">Vendace (larvae &amp; juvenile)</option>
+<option value="82">Vendace1 (YOY)</option>
+<option value="83">Vendace2 (YOY)</option>
+<option value="84">Walleye (adult)</option>
+<option value="85">Walleye (juvenile)</option>
+<option value="86">Walleye pollock (adult)</option>
+<option value="87">Walleye pollock (juvenile)</option>
+<option value="88">Weakfish (age-0)</option>
+<option value="89">Weakfish (juvenile &amp; adult)</option>
+<option value="90">White bass (larvae)</option>
+<option value="91">White crappie (adult)</option>
+<option value="92">White perch (juvenile &amp; adult)</option>
+<option value="93" selected>Yellow perch (adult)</option>
+<option value="94">Yellow perch (juvenile)</option>
+<option value="95">Yellow perch (larvae)</option>
+<option value="96">Zander (adult)</option>
+<option value="97">Zebrafish</option>
+<option value="98">Zebra mussel</option></select>
+        <script type="application/json" data-for="spec" data-nonempty="">{}</script>
+        <div id="fitto" class="control-group shiny-input-radiogroup">
+          <label class="control-label" for="fitto">Fit to:</label>
+          <label class="radio ">
+            <input type="radio" name="fitto" id="fitto1" value="Weight" checked="checked"/>
+            <span>End Weight</span>
+          </label>
+          <label class="radio ">
+            <input type="radio" name="fitto" id="fitto2" value="Consumption"/>
+            <span>Consumption</span>
+          </label>
+          <label class="radio ">
+            <input type="radio" name="fitto" id="fitto3" value="p-value"/>
+            <span>p-value</span>
+          </label>
+        </div>
+        <label for="InW">Initial Weight (g)</label>
+        <input id="InW" type="number" value="60"/>
+        <label for="FinW">Final Weight (g)</label>
+        <input id="FinW" type="number" value="90"/>
+        <label for="eat">Consumption (g)</label>
+        <input id="eat" type="number" value="300"/>
+        <label for="pval">p-value</label>
+        <input id="pval" type="number" value="0.3"/>
+        <label for="ID">Initial Day</label>
+        <input id="ID" type="number" value="1"/>
+        <label for="FD">Final Day</label>
+        <input id="FD" type="number" value="2"/>
+        <h3>Table Output</h3>
+        <label for="int">Interval (days)</label>
+        <input id="int" type="number" value="1"/>
+        <label class="control-label" for="var">Variables</label>
+        <select id="var" multiple="multiple"><option value="Day" selected>Day</option>
+<option value="Temperature" selected>Temperature</option>
+<option value="Initial.Weight" selected>Initial Weight (g)</option>
+<option value="Final.Weight" selected>Final Weight (g)</option>
+<option value="Population.Number">Population Number</option>
+<option value="Population.Biomass">Population Biomass (g)</option>
+<option value="Specific.Growth.Rate.Joules">Specific Growth Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Joules">Specific Consumption Rate (J/g)</option>
+<option value="Specific.Egestion.Rate">Specific Egestion Rate (J/g)</option>
+<option value="Specific.Excretion.Rate">Specific Excretion Rate (J/g)</option>
+<option value="Specific.Respiration.Rate">Specific Respiration Rate (J/g)</option>
+<option value="Specific.SDA.Rate">Specific SDA Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Grams">Specific Consumption Rate (g)</option>
+<option value="Specific.Growth.Rate.Grams">Specific Growth Rate (g)</option>
+<option value="Initial.Predator.Energy.Density">Initial Predator Energy Density (J)</option>
+<option value="Final.Predator.Energy.Density">Final Predator Energy Density (J)</option>
+<option value="Mean.Prey.Energy.Density">Mean Prey Energy Density (J/g)</option>
+<option value="Daily.Weight.Increment">Daily Weight Increment (g)</option>
+<option value="Daily.Energy.Increment">Daily Energy Increment (J)</option>
+<option value="Gross.Production.Grams">Gross Production (g)</option>
+<option value="Gross.Production.Joules">Gross Production (J)</option>
+<option value="Net.Production.Grams">Net Production (g)</option>
+<option value="Net.Production.Joules">Net Production (J)</option>
+<option value="Prey.Tot.Ind.Grams">Prey Tot Ind (g)</option>
+<option value="Prey.Tot.Ind.Joules">Prey Tot Ind (J)</option>
+<option value="Prey.Tot.Pop.Grams">Prey Tot Pop (g)</option>
+<option value="Prey.Tot.Pop.Joules">Prey Tot Pop (J)</option>
+<option value="Mortality.number">Mortality number</option>
+<option value="Mortality">Mortality</option></select>
+        <script type="application/json" data-for="var">{}</script>
+        <h3>Plot Output</h3>
+        <label class="control-label" for="xaxis">X Axis</label>
+        <select id="xaxis"><option value="Day" selected>Day</option>
+<option value="Temperature">Temperature</option>
+<option value="Initial.Weight">Initial Weight (g)</option>
+<option value="Final.Weight">Final Weight (g)</option>
+<option value="Population.Number">Population Number</option>
+<option value="Population.Biomass">Population Biomass (g)</option>
+<option value="Specific.Growth.Rate.Joules">Specific Growth Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Joules">Specific Consumption Rate (J/g)</option>
+<option value="Specific.Egestion.Rate">Specific Egestion Rate (J/g)</option>
+<option value="Specific.Excretion.Rate">Specific Excretion Rate (J/g)</option>
+<option value="Specific.Respiration.Rate">Specific Respiration Rate (J/g)</option>
+<option value="Specific.SDA.Rate">Specific SDA Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Grams">Specific Consumption Rate (g)</option>
+<option value="Specific.Growth.Rate.Grams">Specific Growth Rate (g)</option>
+<option value="Initial.Predator.Energy.Density">Initial Predator Energy Density (J)</option>
+<option value="Final.Predator.Energy.Density">Final Predator Energy Density (J)</option>
+<option value="Mean.Prey.Energy.Density">Mean Prey Energy Density (J/g)</option>
+<option value="Daily.Weight.Increment">Daily Weight Increment (g)</option>
+<option value="Daily.Energy.Increment">Daily Energy Increment (J)</option>
+<option value="Gross.Production.Grams">Gross Production (g)</option>
+<option value="Gross.Production.Joules">Gross Production (J)</option>
+<option value="Net.Production.Grams">Net Production (g)</option>
+<option value="Net.Production.Joules">Net Production (J)</option>
+<option value="Prey.Tot.Ind.Grams">Prey Tot Ind (g)</option>
+<option value="Prey.Tot.Ind.Joules">Prey Tot Ind (J)</option>
+<option value="Prey.Tot.Pop.Grams">Prey Tot Pop (g)</option>
+<option value="Prey.Tot.Pop.Joules">Prey Tot Pop (J)</option>
+<option value="Mortality.number">Mortality number</option>
+<option value="Mortality">Mortality</option></select>
+        <script type="application/json" data-for="xaxis" data-nonempty="">{}</script>
+        <label class="control-label" for="yaxis">Y Axis</label>
+        <select id="yaxis"><option value="Day">Day</option>
+<option value="Temperature" selected>Temperature</option>
+<option value="Initial.Weight">Initial Weight (g)</option>
+<option value="Final.Weight">Final Weight (g)</option>
+<option value="Population.Number">Population Number</option>
+<option value="Population.Biomass">Population Biomass (g)</option>
+<option value="Specific.Growth.Rate.Joules">Specific Growth Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Joules">Specific Consumption Rate (J/g)</option>
+<option value="Specific.Egestion.Rate">Specific Egestion Rate (J/g)</option>
+<option value="Specific.Excretion.Rate">Specific Excretion Rate (J/g)</option>
+<option value="Specific.Respiration.Rate">Specific Respiration Rate (J/g)</option>
+<option value="Specific.SDA.Rate">Specific SDA Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Grams">Specific Consumption Rate (g)</option>
+<option value="Specific.Growth.Rate.Grams">Specific Growth Rate (g)</option>
+<option value="Initial.Predator.Energy.Density">Initial Predator Energy Density (J)</option>
+<option value="Final.Predator.Energy.Density">Final Predator Energy Density (J)</option>
+<option value="Mean.Prey.Energy.Density">Mean Prey Energy Density (J/g)</option>
+<option value="Daily.Weight.Increment">Daily Weight Increment (g)</option>
+<option value="Daily.Energy.Increment">Daily Energy Increment (J)</option>
+<option value="Gross.Production.Grams">Gross Production (g)</option>
+<option value="Gross.Production.Joules">Gross Production (J)</option>
+<option value="Net.Production.Grams">Net Production (g)</option>
+<option value="Net.Production.Joules">Net Production (J)</option>
+<option value="Prey.Tot.Ind.Grams">Prey Tot Ind (g)</option>
+<option value="Prey.Tot.Ind.Joules">Prey Tot Ind (J)</option>
+<option value="Prey.Tot.Pop.Grams">Prey Tot Pop (g)</option>
+<option value="Prey.Tot.Pop.Joules">Prey Tot Pop (J)</option>
+<option value="Mortality.number">Mortality number</option>
+<option value="Mortality">Mortality</option></select>
+        <script type="application/json" data-for="yaxis" data-nonempty="">{}</script>
+        <label class="control-label" for="yaxis2">Y Axis 2</label>
+        <select id="yaxis2"><option value="Day">Day</option>
+<option value="Temperature">Temperature</option>
+<option value="Initial.Weight">Initial Weight (g)</option>
+<option value="Final.Weight" selected>Final Weight (g)</option>
+<option value="Population.Number">Population Number</option>
+<option value="Population.Biomass">Population Biomass (g)</option>
+<option value="Specific.Growth.Rate.Joules">Specific Growth Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Joules">Specific Consumption Rate (J/g)</option>
+<option value="Specific.Egestion.Rate">Specific Egestion Rate (J/g)</option>
+<option value="Specific.Excretion.Rate">Specific Excretion Rate (J/g)</option>
+<option value="Specific.Respiration.Rate">Specific Respiration Rate (J/g)</option>
+<option value="Specific.SDA.Rate">Specific SDA Rate (J/g)</option>
+<option value="Specific.Consumption.Rate.Grams">Specific Consumption Rate (g)</option>
+<option value="Specific.Growth.Rate.Grams">Specific Growth Rate (g)</option>
+<option value="Initial.Predator.Energy.Density">Initial Predator Energy Density (J)</option>
+<option value="Final.Predator.Energy.Density">Final Predator Energy Density (J)</option>
+<option value="Mean.Prey.Energy.Density">Mean Prey Energy Density (J/g)</option>
+<option value="Daily.Weight.Increment">Daily Weight Increment (g)</option>
+<option value="Daily.Energy.Increment">Daily Energy Increment (J)</option>
+<option value="Gross.Production.Grams">Gross Production (g)</option>
+<option value="Gross.Production.Joules">Gross Production (J)</option>
+<option value="Net.Production.Grams">Net Production (g)</option>
+<option value="Net.Production.Joules">Net Production (J)</option>
+<option value="Prey.Tot.Ind.Grams">Prey Tot Ind (g)</option>
+<option value="Prey.Tot.Ind.Joules">Prey Tot Ind (J)</option>
+<option value="Prey.Tot.Pop.Grams">Prey Tot Pop (g)</option>
+<option value="Prey.Tot.Pop.Joules">Prey Tot Pop (J)</option>
+<option value="Mortality.number">Mortality number</option>
+<option value="Mortality">Mortality</option></select>
+        <script type="application/json" data-for="yaxis2" data-nonempty="">{}</script>
+        <div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-refresh"></i>
+            Run
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="span8">
+      <div class="tabbable tabs-above">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#tab-8089-1" data-toggle="tab">Table</a>
+          </li>
+          <li>
+            <a href="#tab-8089-2" data-toggle="tab">Plot</a>
+          </li>
+          <li>
+            <a href="#tab-8089-3" data-toggle="tab">Summary</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab-8089-1">
+            <div id="table" class="shiny-html-output"></div>
+          </div>
+          <div class="tab-pane" id="tab-8089-2">
+            <div id="plot" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+          </div>
+          <div class="tab-pane" id="tab-8089-3">
+            <div id="summary" class="shiny-html-output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

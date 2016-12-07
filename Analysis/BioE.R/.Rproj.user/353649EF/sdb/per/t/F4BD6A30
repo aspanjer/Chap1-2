@@ -1,0 +1,18 @@
+{
+    "contents" : "glm.test<-read.csv(file=\"glm.csv\")\nglm1<-glm(glm.test$Average.of.p.value~glm.test$Drift_Den + glm.test$Salmonids, family=poisson)\nsummary(glm1)\n",
+    "created" : 1475761600966.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2856045049",
+    "id" : "F4BD6A30",
+    "lastKnownWriteTime" : 1475785689,
+    "path" : "~/Documents/glm.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

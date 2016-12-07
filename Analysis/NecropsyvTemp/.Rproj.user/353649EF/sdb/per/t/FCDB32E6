@@ -1,0 +1,18 @@
+{
+    "contents" : "#Need to change to proportion of occurance and add an axis with either site names and color coded from low urban to high\nnecavg<-read.csv(file=\"NEC.csv\")\nlab<-necavg[,1]\npar(mfcol=c(3,3))\npar(mar=c(.5,.5,0,0), oma=c(4,4,2,2))\nfor(i in 2:10)\n{\n  barplot(height=necavg[,i], ann=F, axes=F, ylim=c(0,30), col=c('#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928'))\n  title(colnames(necavg)[i], line=-1)\n  box(col=\"gray50\")\n    \n  if(i %in% c(2,3,4)){ axis(side=2, xlab=\"Average Goede Score\")}\n  #if(i %in% c(4,7,10)){\n   # text(x = seq(1, 12, by=1), par(\"usr\")[3] - 0.2, labels = lab, srt = 45, pos = 1, xpd = TRUE)\n    #}\n}\nmtext(\"Coho Goede Gross Abnormality Necropsy Scores\", side=3, outer=TRUE, line=.1)\nmtext(\"Average Goede Score\", side=2, outer=TRUE, line=2)\npar(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)\nplot(0, 0, type = \"n\", bty = \"n\", xaxt = \"n\", yaxt = \"n\")\nlegend(\"bottom\",c(\"Coulter\", \"Rock Creek\", \"Issaquah\",\"Church\",\n                  \"Harris\", \"May\", \"Jenkins\",\n                  \"Woodland\", \"Longfellow\", \"Mercer\", \n                  \"Swamp\", \"Thorton\") , xpd = TRUE,\n       inset = c(0, 0), bty = \"n\", lty=1, lwd=10, ncol=6, col=c('#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928'))\n\n\nnecavg$Site\n\n\nc(\"Coulter\", \"Rock Creek\")\nlegend(\"bottom\", necavg[,1],lty=1,col=terrain.colors(12), ncol=2, bty=\"n\")\ndev.off()\n)\n\n\n",
+    "created" : 1458314023247.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3079752004",
+    "id" : "FCDB32E6",
+    "lastKnownWriteTime" : 1457325758,
+    "path" : "~/Documents/Current Projects/NecropsyvTemp/NecropsyBar.R",
+    "project_path" : "NecropsyBar.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

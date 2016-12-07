@@ -1,0 +1,18 @@
+{
+    "contents" : "###PAUASE OUT TO MAKE GRAPHS###\n\ncoho.p.J<-read.csv(file=\"Model_results_coho_J.csv\", header=T)\n?boxplot\npar(cex.lab=1.5, cex.axis=1.7)\nboxplot(coho.p.J$Final.Weight~coho.p.J$site.level, names=coho.9, ylab=\"Final Weight (g)\", xaxs=\"i\", cex.names=5, col=\"blue\")\ncoho.9<-c(\"Coulter\",\"E.F. Dariy\",\"Issaquah\",\"Harris\",\"Church\",\"May\",\"Woodland\",\"Jenkins\",\"Longfellow\",\"Swamp\")\ncoho.p.S<-read.csv(file=\"Model_results_coho_S.csv\", header=T)\nboxplot(coho.p.S$Final.Weight~coho.p.S$site.level, names=coho.6, ylab=\"% of maximum consumption\", xaxs=\"i\", col=\"blue\")\ncoho.6<-c(\"Coulter\",\"Issaquah\", \"Harris\", \"May\", \"Jenkins\", \"Swamp\")\n?plot\n",
+    "created" : 1473351749402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2887574310",
+    "id" : "987BEEFE",
+    "lastKnownWriteTime" : 1476203651,
+    "path" : "~/Documents/Current Projects/BioE.R/graphs.R",
+    "project_path" : "graphs.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

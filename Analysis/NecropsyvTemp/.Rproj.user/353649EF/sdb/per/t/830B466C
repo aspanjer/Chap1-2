@@ -1,0 +1,18 @@
+{
+    "contents" : "necpro<-read.csv(file=\"NEC_pro.csv\", header=TRUE)\nnecproS<-read.csv(file=\"NecS.csv\", header=TRUE)\n\npar(mfrow=c(3,3))\npar(mar=c(.5,.5,0,0), oma=c(4,9,2,2))\nfor(i in 3:11)\n{\n  barplot(height=necpro[,i], ann=F, axes=F, ylim=c(0,1.3), col=c(\"#08306b\",\"#313695\",\"#4575b4\",\"#74add1\",\"#abd9e9\",\"#e0f3f8\",\"#ffffbf\",\"#fee090\",\"#fdae61\",\"#f46d43\",\"#d73027\",\"#a50026\"))\n  title(colnames(necpro)[i], line=-3.5, cex.main=2.8)\n  #box(col=\"gray50\")\n  \n  if(i %in% c(3,6,9)){ axis(side=2, xlab=\"Average Goede Score\", at=c(0,.5,1.0), las=1, cex.axis=2)}\n  if(i %in% c(4,5,7,8,10,11)){axis(side=2, labels= FALSE, tick=TRUE, at=c(0,.5,1.0), cex.axis=2)}\n  if(i %in% c(3:11)){axis(side=1, labels=F, tick=T, lwd.ticks=0)}\n  #if(i %in% c(4,7,10)){\n  # text(x = seq(1, 12, by=1), par(\"usr\")[3] - 0.2, labels = lab, srt = 45, pos = 1, xpd = TRUE)\n  #}\n}\n#mtext(\"Abnormality occurence\", side=3, outer=TRUE, line=.1)\nmtext(\"Proportion of fish affected\", side=2, outer=TRUE, line=5, cex=2.3)\ndev.off()\npar(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)\nplot(0, 0, type = \"n\", bty = \"n\", xaxt = \"n\", yaxt = \"n\")\nlegend(\"center\",c(\"Coulter\", \"Rock Creek\", \"Issaquah\",\"Church\",\n                  \"Harris\", \"May\", \"Jenkins\",\n                  \"Woodland\", \"Longfellow\", \"Mercer\", \n                  \"Swamp\", \"Thorton\"), title=\"Site\",  xpd = TRUE,\n       inset = c(0, 0),cex=2.3, bty = \"n\", ncol=1, fill=c(\"#08306b\",\"#313695\",\"#4575b4\",\"#74add1\",\"#abd9e9\",\"#e0f3f8\",\"#ffffbf\",\"#fee090\",\"#fdae61\",\"#f46d43\",\"#d73027\",\"#a50026\"))\n\n?legend\n###Necrospy September Scores###\ndev.off()\npar(mfrow=c(3,3))\npar(mar=c(.5,.5,0,0), oma=c(4,9,2,2))\nfor(i in c(3:11)) {\n  barplot(height=necproS[,i], ann=F, axes=F, ylim=c(0,1.2), col=c(\"#08306b\",\"#4575b4\",\"#abd9e9\",\"#e0f3f8\",\"#ffffbf\",\"#d73027\"))\n  title(colnames(necpro)[i], line=-3.5, cex.main=2.8)\n  #box(col=\"gray50\")\n  \n  if(i %in% c(3,6,9)){ axis(side=2, xlab=\"Average Goede Score\", las=1, cex.axis=2, at=c(0,.5,1.0))}\n  if(i %in% c(4,5,7,8,10,11)){axis(side=2, labels= FALSE, tick=TRUE, at=c(0,.5,1.0), cex.axis=2)}\n  if(i %in% c(3:11)){axis(side=1, labels=F, tick=T, lwd.ticks=0)}\n  #if(i %in% c(4,7,10)){\n  # text(x = seq(1, 12, by=1), par(\"usr\")[3] - 0.2, labels = lab, srt = 45, pos = 1, xpd = TRUE)\n  #}\n}\n#mtext(\"Abnormality occurence\", side=3, outer=TRUE, line=.1)\nmtext(\"Proportion of fish affected\", side=2, outer=TRUE, line=5, cex=2.3)\ndev.off()\npar(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)\nplot(0, 0, type = \"n\", bty = \"n\", xaxt = \"n\", yaxt = \"n\")\nlegend(\"center\",c(\"Coulter\", \"Issaquah\",\n                  \"Harris\", \"May\", \"Jenkins\",\n                  \"Swamp\") , title=\"Site\",  xpd = TRUE,\n       inset = c(0, 0),cex=2.3, bty = \"n\", fill=c(\"#08306b\",\"#4575b4\",\"#abd9e9\",\"#e0f3f8\",\"#ffffbf\",\"#d73027\"))\n\n",
+    "created" : 1458582175478.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1739780953",
+    "id" : "830B466C",
+    "lastKnownWriteTime" : 1461629336,
+    "path" : "~/Documents/Current Projects/NecropsyvTemp/NecropsyProp.R",
+    "project_path" : "NecropsyProp.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

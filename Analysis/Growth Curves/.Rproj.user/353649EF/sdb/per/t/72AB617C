@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1461691481054.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "72AB617C",
+    "lastKnownWriteTime" : 4330789888,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "uucr885gde",
+        "caption" : "HighC.3",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=HighC.3&cache_key=uucr885gde",
+        "displayedObservations" : 25,
+        "environment" : "",
+        "object" : "HighC.3",
+        "totalObservations" : 25,
+        "variables" : 7
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

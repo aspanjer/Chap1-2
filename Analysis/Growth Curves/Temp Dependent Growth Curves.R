@@ -1,0 +1,152 @@
+#This r script creates Chinook temperature-dependent growth curves for a given combination of
+#consumer weight, consumer energy density (J/g), feeding  rate (P-value or %Cmax), and prey energy
+#density (J/g).
+
+#Define Chinook-specific parameters:
+#Consumption related parameters (user defined):
+CA <- 0.303 
+CB <- -0.275
+CQ <- 5           
+CTO <- 15         
+CTM <- 20.93         #(Source: Plumb & Moffitt 2015)
+CTL <- 24.05         #(Source: Plumb & Moffitt 2015)
+CK1 <- 0.36          
+CK4 <- 0.53          #(Source: Plumb & Moffitt 2015)  
+
+#Respiration related parameters (user defined):
+RA <- 0.00264 
+RB <- -0.217
+RQ <- 0.06818
+RTO <- 0.0234
+RTM <- 0
+RTL <- 25
+RK1 <- 1
+RK4 <- 0.13
+ACT <- 9.7
+BACT <- 0.0405
+SDA <- 0.172
+OxyConv <- 13560 #J/gram of O2 in respiration conversions (Elliot and Davidson 1975).   
+
+#Egestion and excretion parameters (user defined):
+FA <- 0.212 
+FB <- -0.222
+FG <- 0.631
+UA <- 0.0314
+UB <- 0.58
+UG <- -0.299
+
+#Define range of temperatures over which to estimate growth
+Temp <- seq(from = 1, to = 25, by = 1)
+
+#Define function TempGrowth that creates Chinook temperature-dependent growth curves for a given
+#combination of consumer weight ("cons.wt"), consumer energy density ("cons.ED"; J/g), feeding  
+#rate ("pval"; P-value or %Cmax), and prey energy density ("prey.ED"; J/g).
+TempGrowth <- function(cons.wt, cons.ED, pval, prey.ED) {
+     #Define empty vector of length (length(Temp)) for growth values at each temperature
+     Growth <- vector(length = length(Temp))
+     #Define empty vector of length (length(Temp)) for consumption values at each temperature
+     Consumption <- vector(length = length(Temp))
+     #Define empty vector of length (length(Temp)) for egestion and excretion values at each 
+     #temperature
+     Egestion <- vector(length = length(Temp))
+     Excretion <- vector(length = length(Temp))
+     #Define empty vector of length (length(Temp)) for SDAction and respiration values at each
+     #temperature
+     SDAction <- vector(length = length(Temp))
+     Respiration <- vector(length = length(Temp))
+     #Calculate Consumption at each temperature and store in Consumption vector
+     for(i in 1:length(Temp)) {
+          G1 <- (1/(CTO-CQ))*log((0.98*(1-CK1))/(CK1*0.02))   
+          G2 <- (1/(CTL-CTM))*log((0.98*(1-CK4))/(CK4*0.02)) 
+          L1 <- (exp(G1*(Temp[i]-CQ)))
+          L2 <- (exp(G2*(CTL-Temp[i]))) 
+          KA <- (CK1*L1)/(1+CK1*(L1 - 1)) 
+          KB <- (CK4*L2)/(1+CK4*(L2 - 1))
+          ft.con <- (KA*KB)
+          Consumption[i] <- (CA*cons.wt^CB)*pval*ft.con
+     }
+     #Calculate Egestion at each temperature and store in Egestion and Excretion vectors
+     for (i in 1:length(Temp)) {
+          Egestion[i] <- FA*(Temp[i]^FB)*exp(FG*pval)*Consumption[i]
+          Excretion[i] <- UA*(Temp[i]^UB)*exp(UG*pval)*(Consumption[i]-Egestion[i])
+     }
+     #Calculate SDAction and Respiration values at each temperature and store in SDAction and
+     #Respiration vectors
+     for (i in 1:length(Temp)) {
+          ifelse(Temp[i] > RTL, VEL <- RK1*cons.wt^RK4, VEL <- ACT*(cons.wt^RK4)*exp(BACT*Temp[i]))
+                            ft.metabolism <- exp(RQ*Temp[i])
+    	                       ACTIVITY <- exp(RTO*VEL)  
+    	     Respiration[i] <- RA*(cons.wt^RB)*ft.metabolism*ACTIVITY #Units --> Specific (g O2/g/d). 
+          SDAction[i] <- SDA*(Consumption[i]-Egestion[i]) #Units --> Specific (g/g/d) 
+     }
+     Growth <- ((Consumption*prey.ED) - (((Egestion+Excretion+SDAction)*prey.ED) + (Respiration*OxyConv)))/cons.ED
+     return(data.frame(Temp, Growth, Consumption, Excretion, Egestion, SDAction, Respiration))
+}
+
+#Calculate Temp-dependent Growth curves for different P-value/Prey ED combinations
+     #Low PreyED = 3700
+          LowC.3 <- TempGrowth(cons.wt = 2, cons.ED = 4201.6, pval = 0.3, prey.ED = 4201.6)
+          LowC.5 <- TempGrowth(cons.wt = 2, cons.ED = 4201.6, pval = 0.5, prey.ED = 4201.6)
+          LowC.7 <- TempGrowth(cons.wt = 2, cons.ED = 4201.6, pval = 0.7, prey.ED = 4201.6)
+     #Mid PreyED = 4200
+          MidC.3 <- TempGrowth(cons.wt = 2, cons.ED = 4648.8, pval = 0.3, prey.ED = 4648.8)
+          MidC.5 <- TempGrowth(cons.wt = 2, cons.ED = 4648.8, pval = 0.5, prey.ED = 4648.8)
+          MidC.7 <- TempGrowth(cons.wt = 2, cons.ED = 4648.8, pval = 0.7, prey.ED = 4648.8)
+     #High PreyED = 5200
+          HighC.3 <- TempGrowth(cons.wt = 2, cons.ED = 5200, pval = 0.3, prey.ED = 5200)
+          HighC.5 <- TempGrowth(cons.wt = 2, cons.ED = 5200, pval = 0.5, prey.ED = 5200)
+          HighC.7 <- TempGrowth(cons.wt = 2, cons.ED = 5200, pval = 0.7, prey.ED = 5200)
+
+#Plot Temp-dependent growth curves
+par(mfrow=c(3,1), mar = c(0,0,0.5,0), oma = c(5,5,4,1), cex.axis = 1.6)
+     #High PreyED
+          matplot(x = HighC.3$Temp, y = HighC.3$Growth, pch = 20, type = "o", xlim = c(0,25), 
+          ylim = c(0,0.1), xaxs = "i", yaxs = "i", xaxt = "n", yaxt = "n", col = "blue")
+               axis(side = 2, at = c( 0.05, 0.1))
+          
+          matplot(x = HighC.5$Temp, y = HighC.5$Growth, pch = 15, type = "o", add = T, 
+               col = "green2")
+          
+          matplot(x = HighC.7$Temp, y = HighC.7$Growth, pch = 17, type = "o", add = T, col = "red")
+          
+          #polygon(x = c(9,9,13,13), y = c(0,0.06,0.06,0), col = (rgb(red = .2, green = .3, 
+               blue = .4, alpha = .4)))
+abline(h=.05, lty=2)
+          legend("topright", legend = "0 ug/L Cu", bty = "n", cex = 1.3)
+          
+     #Mid PreyED
+          matplot(x = MidC.3$Temp, y = MidC.3$Growth, pch = 20, type = "o", xlim = c(0,25), 
+          ylim = c(0,0.1), xaxs = "i", yaxs = "i", xaxt = "n", yaxt = "n", col = "blue")
+               axis(side = 2, at = c( 0.05, 0.1))
+          matplot(x = MidC.5$Temp, y = MidC.5$Growth, pch = 15, type = "o", add = T, col = "green2")
+          
+          matplot(x = MidC.7$Temp, y = MidC.7$Growth, pch = 17, type = "o", add = T, col = "red")
+          abline(h=.05, lty=2)
+          #polygon(x = c(9,9,13,13), y = c(0,0.1,0.06,0), col = (rgb(red = .2, green = .3, 
+               #blue = .4, alpha = .4)))
+          
+          legend("topright", legend = "22.2 ug/L Cu", bty = "n", cex = 1.3)
+          
+     #Low PreyED
+          matplot(x = LowC.3$Temp, y = LowC.3$Growth, pch = 20, type = "o", xlim = c(0,25), 
+          ylim = c(0,0.1), xaxs = "i", yaxs = "i", col = "blue", yaxt = "n")
+          axis(side = 2, at = c( 0.05, 0.1)) 
+          matplot(x = LowC.5$Temp, y = LowC.5$Growth, pch = 15, type = "o", add = T, col = "green2")
+          
+          matplot(x = LowC.7$Temp, y = LowC.7$Growth, pch = 17, type = "o", add = T, col = "red")
+          
+          #polygon(x = c(9,9,13,13), y = c(0,0.06,0.06,0), col = (rgb(red = .2, green = .3, 
+               #blue = .4, alpha = .4)))
+          abline(h=.05, lty=2)
+          legend("topleft", legend = c("70% Cmax", "50% Cmax", "30% Cmax"), pch = c(17,15,20),
+          lty = 1, col = c("red", "green2", "blue"), bty = "n", cex = 1.3)
+          
+          legend("topright", legend = "54.1 ug/L Cu", bty = "n", cex = 1.3)
+
+mtext(text = "2g Coho Growth Rates", side = 3, line = 1, outer = T, cex = 1.5)
+mtext(text = "Growth Rate (g/g*d)", side = 2, line = 2.75, outer = T, cex = 1.2)
+mtext(text = expression(paste("Temperature (", degree, "C)")), side = 1, line = 2.75, outer = T, cex = 1.2)
+
+
+
+          
